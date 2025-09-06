@@ -16,7 +16,7 @@ interface CustomerNavigationProps {
 
 export default function CustomerNavigation({ activeView, onViewChange }: CustomerNavigationProps) {
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200">
+    <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 pb-8">
       <div className="flex justify-around items-center h-16">
         {navigationItems.map(({ key, icon: Icon, label }) => {
           const isActive = activeView === key
@@ -26,7 +26,7 @@ export default function CustomerNavigation({ activeView, onViewChange }: Custome
               onClick={() => onViewChange(key)}
               className={`flex flex-col items-center justify-center flex-1 h-full ${
                 isActive 
-                  ? 'text-blue-600' 
+                  ? 'text-primary' 
                   : 'text-gray-500 hover:text-gray-700'
               }`}
             >
